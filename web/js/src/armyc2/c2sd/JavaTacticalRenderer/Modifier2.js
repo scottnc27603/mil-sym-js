@@ -3692,9 +3692,9 @@ armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddModifiersGeo = function(tg, g2d, c
       case 22234000:
       case 22234100:
       case 22234200:
-        armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, label, 3, -4.0, ptCenter, ptCenter, new Boolean(false), "");
-        armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, tg.get_Name(), 3, -3.0, ptCenter, ptCenter, new Boolean(false), "T");
-        armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, "MIN ALT: " + tg.get_H(), 3, -2.0, ptCenter, ptCenter, new Boolean(false), "H");
+        armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, label, 3, -6.0, ptCenter, ptCenter, new Boolean(false), "");
+        armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, tg.get_Name(), 3, -5.0, ptCenter, ptCenter, new Boolean(false), "T");
+        armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, "MIN ALT: " + tg.get_H(), 3, -4.0, ptCenter, ptCenter, new Boolean(false), "H");
         armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, "MAX ALT: " + tg.get_H1(), 3, 2.2, ptCenter, ptCenter, new Boolean(false), "H1");
         armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, "TIME FROM: " + tg.get_DTG(), 3, 3.2, ptCenter, ptCenter, new Boolean(false), "W");
         armyc2.c2sd.JavaTacticalRenderer.Modifier2.AddIntegralAreaModifier(tg, "TIME TO: " + tg.get_DTG1(), 3, 4.2, ptCenter, ptCenter, new Boolean(false), "W1");
