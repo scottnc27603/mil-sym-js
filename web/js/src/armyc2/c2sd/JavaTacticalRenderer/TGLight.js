@@ -432,6 +432,7 @@ armyc2.c2sd.JavaTacticalRenderer.TGLight.prototype.set_HideOptionalLabels = func
     this._HideOptionalLabels = value;
 };
 armyc2.c2sd.JavaTacticalRenderer.TGLight.prototype.addModifier = function( mod ) {
+    console.info( "    addModifier( " + JSON.stringify(mod) + " )" );
     this.modifiers.add( mod );
     //this.calculate_Offset();
 };
@@ -468,5 +469,22 @@ armyc2.c2sd.JavaTacticalRenderer.TGLight.prototype.calculate_Offset = function()
         } );    
     }
 };
+armyc2.c2sd.JavaTacticalRenderer.TGLight.prototype.calculate_Bounds = function() {
+    const lats = [];
+    const longs = [];
+    const pixelCount = this.Pixels.size();
+    for ( let i = 0; i < pixelCount - 1; i+=2 ) {
+        lats.push( this.Pixels.get( i ) );
+        longs.push( this.Pixels.get( i+1 ) );
+    }
+    return {
+        east: Math.min( ...longs ),
+        west: Math.max( ...longs ),
+        north: Math.max( ...lats ),
+        south: Math.min( ...lats ),
+        height: Math.max( ...lats ) - Math.min( ...lats ),
+        width: Math.max( ...longs ) - Math.min( ...longs )
+    }
+}
 
 armyc2.c2sd.JavaTacticalRenderer.TGLight._className = "TGLight";
